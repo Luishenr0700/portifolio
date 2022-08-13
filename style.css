@@ -14,6 +14,9 @@
     --font-secundary: 'Josefin Slab', serif;
     --font-action: 'Mulish', serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 .btn{
     border: none;
     background: #304352; 
@@ -31,7 +34,7 @@
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 160;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -183,6 +186,7 @@ header{
     top: 0;
     right: -20rem;
     transition: 1s;
+    z-index: 150;
 }
 
 .show-menu .sidebar{
@@ -236,6 +240,8 @@ header{
 }
 
 .conhecimentos{
+    width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
@@ -268,8 +274,11 @@ header{
     grid-column: 11 / 14;
     grid-row: 5 / -1;
 }
-
+.titulo-conhecimentos{
+    margin-bottom: 8rem;
+}
 .sessao-conhecimentos{
+    height: 100vh;
     background-color: #f5f5f5;
 }
 .sessao-header{
@@ -313,10 +322,19 @@ header{
     object-fit: cover;
     width: 100%;
 }
-
+.sessao-projetos{
+    width: 100%;
+    height: 100vh;
+    background-color: #e4e4e4;
+}
+.titulo-projeto{
+    margin-bottom: 8rem;
+}
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    
     margin-top: 1.3rem;
 }
 
@@ -397,7 +415,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
 }
 
 .contato-wrapper{
@@ -558,4 +575,57 @@ header{
 .btn-orcamento:hover{
     color: #eee;
     box-shadow: 2px 2px 10px #272727;
+}
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all .5s;
+}
+.social-list a:hover{
+    
+    color: #f1e6d2;
+}
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    background: #304352; 
+    background: -webkit-linear-gradient(to left, #757472, #304352);  
+    background: linear-gradient(to left, #757472, #304352);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 2px 2px 5px #000;
 }
